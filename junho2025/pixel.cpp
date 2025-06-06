@@ -1,4 +1,6 @@
-struct Pixel{
+#include <iostream>
+using namespace std;
+/*struct Pixel{
     unsigned char r, g, b;
 };
 
@@ -19,12 +21,12 @@ int main(){
 
 }
 
-
+*/
 enum Naipe {
     Copas, Espadas, Paus, Ouros
 };
 enum Valor {
-    As, V2, V3, V4, V5, V6, V7, V8, V9, V10, VJ, VQ, VK, JOKER
+    As = 1, V2, V3, V4, V5, V6, V7, V8, V9, V10, VJ, VQ, VK, JOKER
 
 };
 
@@ -40,13 +42,14 @@ struct Cartas{
 
 };
 
-int main(){
-    carta c = {VQ, Ouros};
-    //c.naipe = Ouros;
-    //c.valor = VQ;
+bool encontrou(Cartas& conjunto){
 
-    Cartas c = {3, 
-        {{VQ, Ouros}, {V5, Paus}, {As, Copas}}
-    };
+    return false;
+}
+
+
+
+int main(){
+   
 }
 
