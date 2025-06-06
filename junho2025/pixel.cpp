@@ -1,36 +1,15 @@
 #include <iostream>
 using namespace std;
-/*struct Pixel{
-    unsigned char r, g, b;
-};
 
-struct Image {
-    int largura, altura;
-    Pixel pixel[3][3];
-};
-
-int main(){
-    Pixel p1 = {10, 67, 241};
-    Pixel p2 = {10, 67, 241};
-
-    int x[2] = {3, 4};
-
-    Pixel a[3][3] = {{p1, p2, p1},
-                    {p1, p2, p1},
-                    {p1, p1, p2}};
-
-}
-
-*/
 enum Naipe {
     Copas, Espadas, Paus, Ouros
 };
 enum Valor {
-    As = 1, V2, V3, V4, V5, V6, V7, V8, V9, V10, VJ, VQ, VK, JOKER
+    As = 1, V2, V3, V4, V5, V6, V7, V8, V9, V10, VJ, VQ, VK,
 
 };
 
-struct carta{
+struct Carta{
     Valor valor;
     Naipe naipe;
 
@@ -38,18 +17,33 @@ struct carta{
 
 struct Cartas{
     int quantidade;
-    carta cartas[54];
+    Carta cartas[52];
 
 };
 
-bool encontrou(Cartas& conjunto){
+bool temseq(Cartas cartas){
+    for (int i = 0; i < cartas.quantidade -2; i++)
+    {
+        Carta c1 = cartas.cartas[i];
+        Carta c2 = cartas.cartas[i+1];
+        Carta c3 = cartas.cartas[i+2];
+        bool mesmonaipe = c1.naipe == c2.naipe && c2.naipe == c3.naipe;
+        bool sequencia = c1.valor == c2.valor && c2.valor == c3.valor;
+        bool seqdif = c1.naipe == VQ && c2.valor == VK && c3.valor == As;
+
+        if (mesmonaipe && (sequencia || seqdif) )
+        {
+            return true;
+        }
+        
+    }
+    
 
     return false;
 }
 
-
-
 int main(){
-   
+
+   return 0;
 }
 
