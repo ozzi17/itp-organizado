@@ -38,87 +38,51 @@ int main(){
             {
                 int vizvivas = 0;
 
+                if (matriz[i-1][j-1] == 1)
+                    {
+                        vizvivas++;
+                    }
+                if (matriz[i-1][j] == 1)
+                    {
+                        vizvivas++;
+                    }
+                if (matriz[i-1][j+1] == 1)
+                    {
+                        vizvivas++;
+                    }
+                if (matriz[i][j-1] == 1)
+                    {
+                        vizvivas++;
+                    }
+                if (matriz[i][j+1] == 1)
+                    {
+                        vizvivas++;
+                    }
+                if (matriz[i+1][j-1] == 1)
+                    {
+                        vizvivas++;
+                    }
+                if (matriz[i+1][j] == 1)
+                    {
+                        vizvivas++;
+                    }
+                if (matriz[i+1][j+1] == 1)
+                    {
+                        vizvivas++;
+                    }
                 if (matriz[i][j] == 0)
                 {
-
-                    if (matriz[i-1][j-1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i-1][j] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i-1][j+1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i][j-1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i][j+1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i+1][j-1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i+1][j] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i+1][j+1] == 1)
-                    {
-                        vizvivas++;
-                    }
-
                     novamatriz[i][j] = (vizvivas == 3) ? 1 : 0;
                 }
-
                 else if (matriz[i][j] == 1)
                 {
-
-                    if (matriz[i-1][j-1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i-1][j] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i-1][j+1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i][j-1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i][j+1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i+1][j-1] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i+1][j] == 1)
-                    {
-                        vizvivas++;
-                    }
-                    if (matriz[i+1][j+1] == 1)
-                    {
-                        vizvivas++;
-                    }
-
                     novamatriz[i][j] = (vizvivas == 2 || vizvivas == 3 ) ? 1 : 0;
-                    
                 }
-            
-            
+                
+                
             }
+
+                
         }
     
         for (int u = 1; u <= N; u++)
