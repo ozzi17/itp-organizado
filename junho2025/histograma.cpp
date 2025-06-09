@@ -24,7 +24,7 @@ Plateau findplateau(Histograma hist){
             plateau_found.ind_freqvalue = hist.valores[i];
 
             int j = i;
-            while (j < hist.valores[i] && hist.valores[j] == plateau_found.ind_freqvalue)
+            while (j < hist.tam && hist.valores[j] == plateau_found.ind_freqvalue)
             {
                 j++;
             }
